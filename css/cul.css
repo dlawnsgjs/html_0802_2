@@ -1,0 +1,68 @@
+@charset "urf-8";
+* {
+    margin: 0;
+}
+
+#one {
+    width: 100%;
+}
+
+h1 {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    width: 95%;
+}
+
+label {
+    background-color: lightgreen;
+    border-radius: 8px;
+    display: block;
+    margin: 20px 0 0 20px;
+    padding: 20px;
+}
+
+input[type="checkbox"]{
+    margin: 0 0 0 30px;
+}
+
+input[type="radio"]{
+    margin: 0 0 0 30px;
+}
+
+#view {
+    opacity: 0;
+    }
+
+input[type="checkbox"]:checked ~ #view {
+    opacity: 1;
+}
+
+#imgbox {
+    width: 200px;
+    height: 300px;
+    margin: 20px 0 0 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.imgbox > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.imgbox > img:not(:first-child) {
+    display: none;
+}
+
+
+input[value="고구려"]:checked~.imgbox > img[alt="고구려"]{display: block;}
+input[value="백제"]:checked~.imgbox > img[alt="백제"]{display: block;}
+input[value="신라"]:checked~.imgbox > img[alt="신라"]{display: block;}
